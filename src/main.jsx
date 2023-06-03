@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LandingPage from './pages/LandingPage.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
 import PrincipalPage from './pages/PrincipalPage.jsx';
 import CalendarPage from './pages/CalendarPage.jsx';
+import CalendarioPage from './pages/CalendarioPage.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
 import WorkShopPage from './pages/WorkShopPage.jsx';
 import UniversityPage from './pages/UniversityPages.jsx';
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     element: <PrincipalPage />,
   },{
     path: "/calendar",
-    element: <CalendarPage />,
+    element: <CalendarioPage />,
   },{
     path: "/profile",
     element: <ProfilePage />,
