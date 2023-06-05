@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import React, { useState } from "react";
-import { generateDate, months, dias } from "../util/calendar";
+import { generateDate, months, dias, minutes, hours } from "../util/calendar";
 import cn from "../util/cn";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import '../assets/Calendar.css';
@@ -9,14 +9,17 @@ import Modal from "../popup/Modal"
 
 
 const CalendarioPage = () => {
+    const psicologos=["Romero","Alejandro","Eleonora","Gabriela"];
     
-
-    const [showModal,setShowModal]=useState(false);
     const days = ["D", "L", "M", "M", "J", "V", "S"];
 	const currentDate = dayjs();
 	const [today, setToday] = useState(currentDate);
+    const [showModal,setShowModal]=useState(false);
 	const [selectDate, setSelectDate] = useState(currentDate);
-   
+    const [time, setTime] = useState("");
+    const [psicologo, setPsicologo] = useState("");
+
+
 
     return(
         <main>
@@ -109,31 +112,31 @@ const CalendarioPage = () => {
         <Modal isvisible={showModal} onClose={()=>setShowModal(false)}> 
         <div class="px-6 py-6 lg:px-8 bg-[#BDE7F9]">
             <div class="flex justify-center items-center">
-                <h3 class="mb-4 text-2xl font-bold font-sans text-[#293A4E]">Selecciona una hora y psicólogo</h3>
+                <h3 className="mb-4 text-2xl font-bold font-sans text-[#293A4E]">Selecciona una hora y psicólogo</h3>
             </div>
                 <form class="space-y-3" action="#">
                     <div>
-                        <label for="email" class="block mb-1 text-xl font-bold text-[#293A4E]">Fecha:</label>
-                        <input type="email" name="email" id="email" class="bg-[#E1FFFA] border border-[#82CEEE] text-gray-900 text-md rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" 
-                        required defaultValue={cn(selectDate.day(), "de", months[selectDate.month()],"del", selectDate.year())}/>
+                        <label for="date" class="block mb-1 text-xl font-bold text-[#293A4E]">Fecha:</label>
+                        <input type="text" name="date" id="date" class="bg-[#E1FFFA] border border-[#82CEEE] text-gray-900 text-md rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" 
+                        required disabled defaultValue={cn(selectDate.date(), "de", months[selectDate.month()],"del", selectDate.year())}/>
                     </div>
                     <div>
-                        <label for="password" class="block mb-1 text-xl font-bold text-[#293A4E]">Hora:</label>
-                        <input type="text" name="password" id="password" placeholder="••••••••" class="bg-[#E1FFFA] border border-[#82CEEE] text-gray-900 text-md rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required/>
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="flex items-start">
-                            <div class="flex items-center h-5">
-                                <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required/>
-                            </div>
-                            <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-                        </div>
-                        <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
+                        <label for="hour" class="block mb-1 text-xl font-bold text-[#293A4E]">Hora:</label>
+                        <input type="time" name="hour" id="hour" placeholder="Selecciona una hora" class="bg-[#E1FFFA] border border-[#82CEEE] text-gray-900 text-md rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " 
+                        required onChange={(e) => setTime(e.target.value)} value={time} />
+                    </div> 
+                    <div>
+                        <label for="psicologo" class="block mb-1 text-xl font-bold text-[#293A4E]">Psicólogo:</label>
+                        <select name="psicologo" id="psicologo" placeholder="Selecciona un psicologo" class="bg-[#E1FFFA] border border-[#82CEEE] text-gray-900 text-md rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " 
+                        required onChange={(e) => setPsicologo(e.target.value)} value={psicologo}>
+                        {psicologos.map((psicolog)=>(<option value={psicolog}>{psicolog}</option>))}
+                        </select>
+                    </div> 
+                    <div>
+                        <label for="asunto" class="block mb-1 text-xl font-bold text-[#293A4E]">Asunto (opcional):</label>
+                        <textarea placeholder="Escribe lo que vas a conversar con el psicólogo" name="asunto" id="asunto" class="bg-[#E1FFFA] border border-[#82CEEE] text-gray-900 text-md rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 resize-none" rows="4" />
                     </div>
                     <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Reservar cita</button>
-                    <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                        Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
-                    </div>
                 </form>
             </div>
         </Modal>

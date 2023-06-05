@@ -1,5 +1,19 @@
 import dayjs from "dayjs";
 
+let minuteArray = Array.from({ length: 60 }, (value, index) => index.toString());
+let hoursArray = Array.from({ length: 24 }, (value, index) => index.toString());
+ 
+function getArray(arr){
+    for (let index = 0; index < arr.length; index++) {
+        if (index <10) {
+          arr[index] = '0'+arr[index];
+        }
+    }
+    return arr
+}
+
+console.log(minuteArray);
+
 export const generateDate = (
 	month = dayjs().month(),
 	year = dayjs().year()
@@ -69,3 +83,6 @@ export const dias= [
     "Viernes",
 	"Sabado"
 ];
+
+export const minutes=getArray(minuteArray);
+export const hours=getArray(hoursArray);
