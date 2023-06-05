@@ -17,7 +17,7 @@ const LoginPage = () => {
                 <h2>Bienvenido a Guiame</h2>
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label>Email:</label>
+                        <label className='text-4xl'>Email:</label>
                         <input
                             type="email"
                             value={email}
