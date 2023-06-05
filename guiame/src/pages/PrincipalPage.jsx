@@ -1,6 +1,9 @@
+import Layout from "../components/Layout";
+import { NavBar } from "../components/NavBar";
+
 const PrincipalPage = () => {
     return(
-        <h1>PrincipalPage</h1>
+        <Layout></Layout>
     )
 }
 
