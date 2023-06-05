@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import React, { useState } from "react";
-import { generateDate, months, dias, minutes, hours } from "../util/calendar";
+import { generateDate, months, dias} from "../util/calendar";
 import cn from "../util/cn";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import '../assets/Calendar.css';
@@ -9,8 +9,8 @@ import Modal from "../popup/Modal"
 
 
 const CalendarioPage = () => {
+
     const psicologos=["Romero","Alejandro","Eleonora","Gabriela"];
-    
     const days = ["D", "L", "M", "M", "J", "V", "S"];
 	const currentDate = dayjs();
 	const [today, setToday] = useState(currentDate);
@@ -18,8 +18,6 @@ const CalendarioPage = () => {
 	const [selectDate, setSelectDate] = useState(currentDate);
     const [time, setTime] = useState("");
     const [psicologo, setPsicologo] = useState("");
-
-
 
     return(
         <main>
@@ -136,7 +134,7 @@ const CalendarioPage = () => {
                         <label for="asunto" class="block mb-1 text-xl font-bold text-[#293A4E]">Asunto (opcional):</label>
                         <textarea placeholder="Escribe lo que vas a conversar con el psicólogo" name="asunto" id="asunto" class="bg-[#E1FFFA] border border-[#82CEEE] text-gray-900 text-md rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 resize-none" rows="4" />
                     </div>
-                    <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Reservar cita</button>
+                    <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={()=>{onClose()}}>Reservar cita</button>
                 </form>
             </div>
         </Modal>
