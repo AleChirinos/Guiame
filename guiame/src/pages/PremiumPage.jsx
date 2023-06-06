@@ -1,7 +1,16 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
 import './PremiumPage.css';
 
 const PremiumPage = () => {
+  const navigate = useNavigate();
+
+  
+  const handlePremiumPayment = () => {
+    navigate("/testPremium")
+    
+  };
   return (
     <div className="premium-page">
       <div className="premium-box">
@@ -13,7 +22,8 @@ const PremiumPage = () => {
             <li>Característica 2</li>
             <li>Característica 3</li>
           </ul>
-          <button>Botón 1</button>
+          <button onClick={handlePremiumPayment}>Botón 1</button>
+
         </div>
         <div className="feature-box green-box">
           <h2>Subtítulo 2</h2>

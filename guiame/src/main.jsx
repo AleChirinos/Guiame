@@ -13,6 +13,7 @@ import UniversityPage from './pages/UniversityPages.jsx';
 import ResultsPage from './pages/ResultsPage.jsx';
 import PremiumPage from './pages/PremiumPage.jsx';
 import TestPage from './pages/TestPage.jsx';
+import TestPremiumPage from './pages/TestPremiumPage.jsx';
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,9 @@ const router = createBrowserRouter([
   },{
     path: "/test",
     element: <TestPage />,
+  },{
+    path: "/testPremium",
+    element: <TestPremiumPage />,
   },
 ])
 
