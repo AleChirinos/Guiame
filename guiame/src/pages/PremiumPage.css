@@ -17,6 +17,7 @@
     /* Agregar max-width */
     width: 100%;
     /* Agregar width */
+    border-radius: 30px;
 }
 
 .feature-box {
