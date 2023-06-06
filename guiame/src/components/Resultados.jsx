@@ -2,10 +2,10 @@ import icon from "../assets/n.jpg"
 const Resultados = ({ gastos, setGastos, setNewGasto }) => {
   return (
     <div className="flex flex-row bg-blue-100 shadow-lg rounded-lg p-5 mx-10 my-10">
-      <div className="">
-      <img src={icon} className=" mx-auto my-5 rounded-lg border-2 border-[#02102b]" alt="university"></img>
+      <div className="w-1/2 mx-5 ">
+      <img src={icon} className=" mx-auto my-5 rounded-lg border-2 border-[#02102b] " alt="university"></img>
       </div>
-      <div className="">
+      <div className="bg-[#bde6f8] rounded-lg">
       <h2 className="text-[#02102b] text-3xl text-center font-bold">
         Examenes de Aptitud
       </h2>
