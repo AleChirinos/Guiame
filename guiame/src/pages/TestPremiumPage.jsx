@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate, Link } from "react-router-dom";
 import './TestPage.css';
 
 const TestPage = ({}) => {
@@ -17,6 +17,14 @@ const TestPage = ({}) => {
         </div>
       </div>
       <div className="grid">
+      <Link to="/test/test1">
+          <div className="grid-item active">
+            <div className="icon-container">
+              <img className="icon" src="src/assets/document.png" alt="Document Icon" />
+            </div>
+            <h2 className="test-title">Test 1</h2>
+          </div>
+        </Link>
         <div className="grid-item active">
           <div className="icon-container">
             <img className="icon" src="src/assets/document.png" alt="Document Icon" />
