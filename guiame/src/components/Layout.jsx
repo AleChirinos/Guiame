@@ -12,7 +12,7 @@ const Layout = () => {
     <>
       <NavBar></NavBar>
       <div className="flex flex-row flex-1 h-screen ">
-        <div className=" w-1/4 bg-gray-800 h-full ">
+        <div className=" w-1/4 bg-[#02102b] h-full ">
           <img src={icon} className="w-1/4 ml-32 my-5 justify-center" alt="Icono sideBar"></img>
           <Link className={`${pathname === '/profile' ? 'font-bold' : ''} border-t border-blue-400 block text-center my-2 py-1 text-white `} to={`/profile`}>
             Perfil
@@ -34,21 +34,21 @@ const Layout = () => {
           <div className="basis-2/3 ">
             <Activity />
             <div className="basis-1/2 flex flex-row">
-              <button className=" hover:bg-red-900 bg-[#3a476a] font-bold py-2 px-2 rounded w-2/3 mx-10"
+            <Link to="/test" ><button className="text-white hover:bg-red-900 bg-[#3a476a] font-bold py-2 px-2 rounded w-2/3 mx-10"
                 //onClick={resetear}
                 type="button">
-                Salir
-              </button>
-              <button className=" hover:bg-red-900 bg-[#3a476a] font-bold py-2 px-2 rounded w-2/3 mx-10"
+                Exámenes
+              </button></Link>
+              <Link to="/university" ><button className="text-white hover:bg-red-900 bg-[#3a476a] font-bold py-2 px-2 rounded w-2/3 mx-10"
                 //onClick={resetear}
                 type="button">
-                Salir
-              </button>
-              <button className=" hover:bg-red-900 bg-[#3a476a] font-bold py-2 px-2 rounded w-2/3 mx-10"
+                Universidades
+              </button></Link>
+              <Link to="/principal" ><button className="text-white hover:bg-red-900 bg-[#3a476a] font-bold py-2 px-2 rounded w-2/3 mx-10"
                 //onClick={resetear}
                 type="button">
-                Salir
-              </button>
+                Mi Comunidad
+              </button></Link>
             </div>
           </div>
           <div className="basis-1/3">

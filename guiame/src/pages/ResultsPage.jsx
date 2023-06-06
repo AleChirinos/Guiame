@@ -13,7 +13,7 @@ const ResultsPage = () => {
         <>
             <NavBar></NavBar>
             <div className="flex flex-row flex-1 h-screen ">
-                <div className=" w-1/4 bg-gray-800 h-full ">
+                <div className=" w-1/4 bg-[#02102b] h-full ">
                     <img src={icon} className="w-1/4 ml-32 my-5 justify-center" alt="Icono sideBar"></img>
                     <Link className={`${pathname === '/profile' ? 'font-bold' : ''} border-t border-blue-400 block text-center my-2 py-1 text-white `} to={`/profile`}>
                         Perfil
@@ -35,7 +35,7 @@ const ResultsPage = () => {
                     <div className="basis-2/3 ">
                         <Resultados />
                         <div className="basis-1/2 flex flex-row">
-                            <div className="bg-gray-900 shadow-lg rounded-lg p-5 mx-10 ">
+                            <div className="bg-[#02102b] shadow-lg rounded-lg p-5 mx-10 ">
                                 <h3 className="text-white text-2xl text-center font-bold">
                                     Ten un feedback más claro y explicativo de tu resultado
                                 </h3>

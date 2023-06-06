@@ -6,7 +6,7 @@ export const NavBar = ({isOpen,setIsopen}) => {
         isOpen === true ? setIsopen(false) : setIsopen(true);
     }
     return (
-        <nav className=" w-full h-full flex items-center justify-between bg-gray-800 p-4">
+        <nav className=" w-full h-full flex items-center justify-between bg-[#02102b] p-4">
             <div className=" flex items-center">
                 <button
                     className="text-white text-xl mr-4"
