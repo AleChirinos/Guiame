@@ -32,9 +32,9 @@ const ResultsPage = () => {
                     </Link>
                 </div>
                 <div className="flex flex-row bg-white w-3/4 ">
-                    <div className="basis-2/3 ">
+                    <div className="">
                         <Resultados />
-                        <div className="basis-1/2 flex flex-row">
+                        <div className="w-full flex flex-row ">
                             <div className="bg-[#02102b] shadow-lg rounded-lg p-5 mx-10 ">
                                 <h3 className="text-white text-2xl text-center font-bold">
                                     Ten un feedback más claro y explicativo de tu resultado
@@ -49,12 +49,7 @@ const ResultsPage = () => {
 
                         </div>
                     </div>
-                    <div className="basis-1/3">
-                        <img src={prop1} className="  h-80 my-3 rounded-lg border border-gray-900" alt="prop1"></img>
-                        <img src={prop2} className="  w-80  rounded-lg border border-gray-900" alt="prop2"></img>
-                        
-
-                    </div>
+                    
 
                 </div>
 

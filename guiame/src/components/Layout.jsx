@@ -31,31 +31,8 @@ const Layout = () => {
           </Link>
         </div>
         <div className="flex flex-row bg-white w-3/4">
-          <div className="basis-2/3 ">
+          <div className="m-auto ">
             <Activity />
-            <div className="basis-1/2 flex flex-row">
-            <Link to="/test" ><button className="text-white hover:bg-red-900 bg-[#3a476a] font-bold py-2 px-2 rounded w-2/3 mx-10"
-                //onClick={resetear}
-                type="button">
-                Exámenes
-              </button></Link>
-              <Link to="/university" ><button className="text-white hover:bg-red-900 bg-[#3a476a] font-bold py-2 px-2 rounded w-2/3 mx-10"
-                //onClick={resetear}
-                type="button">
-                Universidades
-              </button></Link>
-              <Link to="/principal" ><button className="text-white hover:bg-red-900 bg-[#3a476a] font-bold py-2 px-2 rounded w-2/3 mx-10"
-                //onClick={resetear}
-                type="button">
-                Mi Comunidad
-              </button></Link>
-            </div>
-          </div>
-          <div className="basis-1/3">
-          <img src={prop1} className="  h-80 my-3 rounded-lg border border-gray-900" alt="prop1"></img>
-          <img src={prop2} className="  h-80 my-3 rounded-lg border border-gray-900" alt="prop2"></img>
-          <img src={prop3} className="  h-80 w-80 my-4 mb-5 rounded-lg border border-gray-900" alt="prop3"></img>
-
           </div>
 
         </div>
