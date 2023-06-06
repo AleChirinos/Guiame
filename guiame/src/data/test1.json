@@ -1,0 +1,42 @@
+[
+    {
+      "pregunta": "¿Qué tan creativo/a eres?",
+      "opciones": ["Nada creativo/a", "Poco creativo/a", "Moderadamente creativo/a", "Muy creativo/a", "Extremadamente creativo/a"]
+    },
+    {
+      "pregunta": "¿Cuánto disfrutas resolviendo problemas?",
+      "opciones": ["No disfruto resolver problemas", "Prefiero evitar los problemas", "Me gusta resolver problemas", "Disfruto resolver problemas", "Excelente resolviendo problemas"]
+    },
+    {
+      "pregunta": "¿Qué tan organizado/a eres?",
+      "opciones": ["Nada organizado/a", "Poco organizado/a", "Moderadamente organizado/a", "Muy organizado/a", "Extremadamente organizado/a"]
+    },
+    {
+      "pregunta": "¿Cuánto te gusta trabajar en equipo?",
+      "opciones": ["No me gusta trabajar en equipo", "Prefiero trabajar solo/a", "Me gusta trabajar en equipo", "Disfruto trabajar en equipo", "Excelente trabajando en equipo"]
+    },
+    {
+      "pregunta": "¿Qué tan seguro/a te sientes tomando decisiones?",
+      "opciones": ["Nada seguro/a", "Poco seguro/a", "Moderadamente seguro/a", "Muy seguro/a", "Extremadamente seguro/a"]
+    },
+    {
+      "pregunta": "¿Cuánta facilidad tienes para comunicarte con los demás?",
+      "opciones": ["Ninguna facilidad", "Poca facilidad", "Moderada facilidad", "Mucha facilidad", "Gran facilidad"]
+    },
+    {
+      "pregunta": "¿Qué tan interesado/a estás en aprender nuevas habilidades?",
+      "opciones": ["Nada interesado/a", "Poco interesado/a", "Moderadamente interesado/a", "Muy interesado/a", "Extremadamente interesado/a"]
+    },
+    {
+      "pregunta": "¿Cuánto te gusta trabajar en un ambiente estructurado?",
+      "opciones": ["No me gusta trabajar en un ambiente estructurado", "Prefiero un ambiente poco estructurado", "Me gusta cierta estructura en el ambiente", "Disfruto trabajar en un ambiente estructurado", "Excelente trabajando en un ambiente estructurado"]
+    },
+    {
+      "pregunta": "¿Cuánta paciencia tienes al enfrentar desafíos?",
+      "opciones": ["Ninguna paciencia", "Poca paciencia", "Moderada paciencia", "Mucha paciencia", "Gran paciencia"]
+    },
+    {
+      "pregunta": "¿Qué tan interesado/a estás en trabajar con números?",
+      "opciones": ["Nada interesado/a", "Poco interesado/a", "Moderadamente interesado/a", "Muy interesado/a", "Extremadamente interesado/a"]
+    }
+  ]

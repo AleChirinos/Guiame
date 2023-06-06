@@ -25,7 +25,9 @@
 .title {
     margin: 0;
     color: #000000;
-}
+    font-size: 24px;
+    font-weight: bold; /* Título en negrita */
+  }
 
 .grid {
     display: grid;

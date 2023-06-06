@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import './TestPage.css';
 
 const TestPage = ({}) => {
   const navigate = useNavigate();
-  const handlePremium=()=>{
+  const handlePremium = () => {
     console.log("Change page");
     navigate("/premium")
   }
@@ -17,55 +18,57 @@ const TestPage = ({}) => {
         </div>
       </div>
       <div className="grid">
-        <div className="grid-item active">
-          <div className="icon-container">
-            <img className="icon" src="src/assets/document.png" alt="Document Icon" />
+        <Link to="/test/test1">
+          <div className="grid-item active">
+            <div className="icon-container">
+              <img className="icon" src="src/assets/document.png" alt="Document Icon" />
+            </div>
+            <h2 className="test-title">Test 1</h2>
           </div>
-          <h2 className="test-title">Test 1</h2>
-        </div>
-        <div className="grid-item active opacity-60 "onClick={handlePremium}>
+        </Link>
+        <div className="grid-item active opacity-60 " onClick={handlePremium}>
           <div className="icon-container" >
             <img className="icon" src="src/assets/document.png" alt="Document Icon" />
           </div>
           <h2 className="test-title">Test 2</h2>
         </div>
-        <div className="grid-item active opacity-60 "onClick={handlePremium}>
+        <div className="grid-item active opacity-60 " onClick={handlePremium}>
           <div className="icon-container">
             <img className="icon" src="src/assets/document.png" alt="Document Icon" />
           </div>
           <h2 className="test-title">Test 3</h2>
         </div>
-        <div className="grid-item active opacity-60 "onClick={handlePremium}>
+        <div className="grid-item active opacity-60 " onClick={handlePremium}>
           <div className="icon-container">
             <img className="icon" src="src/assets/document.png" alt="Document Icon" />
           </div>
           <h2 className="test-title">Test 4</h2>
         </div>
-        <div className="grid-item active opacity-60 "onClick={handlePremium}>
+        <div className="grid-item active opacity-60 " onClick={handlePremium}>
           <div className="icon-container">
             <img className="icon" src="src/assets/document.png" alt="Document Icon" />
           </div>
           <h2 className="test-title">Test 5</h2>
         </div>
-        <div className="grid-item active opacity-60 "onClick={handlePremium}>
+        <div className="grid-item active opacity-60 " onClick={handlePremium}>
           <div className="icon-container">
             <img className="icon" src="src/assets/document.png" alt="Document Icon" />
           </div>
           <h2 className="test-title">Test 6</h2>
         </div>
-        <div className="grid-item active opacity-60 "onClick={handlePremium}>
+        <div className="grid-item active opacity-60 " onClick={handlePremium}>
           <div className="icon-container">
             <img className="icon" src="src/assets/document.png" alt="Document Icon" />
           </div>
           <h2 className="test-title">Test 7</h2>
         </div>
-        <div className="grid-item active opacity-60 "onClick={handlePremium}>
+        <div className="grid-item active opacity-60 " onClick={handlePremium}>
           <div className="icon-container">
             <img className="icon" src="src/assets/document.png" alt="Document Icon" />
           </div>
           <h2 className="test-title">Test 8</h2>
         </div>
-        <div className="grid-item active opacity-60 "onClick={handlePremium}>
+        <div className="grid-item active opacity-60 " onClick={handlePremium}>
           <div className="icon-container">
             <img className="icon" src="src/assets/document.png" alt="Document Icon" />
           </div>
