@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    background-color: #e6f0ff;
+    color: #002266;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: #002266;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  .pregunta-likert {
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .pregunta {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .opciones {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  button.boton {
+    background-color: #002266; /* Cambiado */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.boton:hover {
+    background-color: #001a4d; /* Cambiado */
+  }
+  
+  .container::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
