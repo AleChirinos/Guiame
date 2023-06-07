@@ -19,9 +19,9 @@ const CalendarPage = () => {
     return(
         <main>
             
-            <div className="flex gap-10 sm:divide-x bg-[#c7daeb] justify-center sm:w-3/4 mx-auto h-screen items-center sm:flex-row flex-col">
-			<div className="w-180 h-96">
-				<div className="flex justify-between items-center">
+            <div className="flex sm:divide-x bg-[#c7daeb] justify-center sm:w-3/4 mx-auto h-screen items-center sm:flex-row flex-col rounded-3xl">
+			<div className="w-180 h-auto p-10 bg-slate-200">
+				<div className="flex justify-between items-center p-5 bg-slate-400">
 					<h1 className="select-none font-semibold">
 						{months[today.month()]}, {today.year()}
 					</h1>
@@ -49,12 +49,12 @@ const CalendarPage = () => {
 						/>
 					</div>
 				</div>
-				<div className="grid grid-flow-col auto-cols-[minmax(0,_1fr)]">
+				<div className="grid grid-flow-col auto-cols-[minmax(0,_1fr)] !pb-0">
 					{days.map((day, index) => {
 						return (
 							<h1
 								key={index}
-								className="text-sm text-center h-14 w-14 grid place-content-center text-gray-500 select-none p-0"
+								className=""
 							>
 								{day}
 							</h1>
@@ -62,14 +62,13 @@ const CalendarPage = () => {
 					})}
 				</div>
 
-				<div className=" grid grid-rows-6 gap-0">
+				<div className="grid !grid-cols-7">
 					{generateDate(today.month(), today.year()).map(
 						({ date, currentMonth, today }, index) => {
 							return (
 								<div
 									key={index}
-									className="p-2 text-center h-17 grid place-content-center text-sm border-t-2 border-t-indigo-500"
-								>
+									className="p-2 text-center h-10 w-16 place-content-center text-xs border-t-2 border-t-indigo-500">
 									<h1
 										className={cn(
 											currentMonth ? "" : "text-gray-400",
@@ -80,9 +79,9 @@ const CalendarPage = () => {
 												.toDate()
 												.toDateString() ===
 												date.toDate().toDateString()
-												? "bg-black text-white"
+												? "bg-black text-white "
 												: "",
-											"h-10 w-10 rounded-full grid place-content-center hover:bg-black hover:text-white transition-all cursor-pointer select-none"
+											"h-10 w-10 rounded-full place-content-center align-center hover:bg-black hover:text-white transition-all cursor-pointer select-none"
 										)}
 										onClick={() => {
 											setSelectDate(date);
