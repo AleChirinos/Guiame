@@ -95,12 +95,12 @@ const CalendarPage = () => {
 					)}
 				</div>
 			</div>
-			<div className="h-96 w-96 sm:px-5">
+			<div className="w-96 h-1/2 sm:px-5 sm:py-5 bg-slate-100 align-top">
 				<h1 className=" font-semibold">
 					Citas del psicólogo para el {dias[selectDate.day()]} {selectDate.date()} de {months[selectDate.month()]} del {today.year()}
 				</h1>
 				<p className="text-gray-400">Sin citas</p>
-                <button className="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75" 
+                <button className="py-2 px-4 bg-blue-500 text-white font-semibold rounded-3xl shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75" 
                 onClick={() => setShowModal(true)}>Reservar cita</button>
 			</div>
 		</div>
