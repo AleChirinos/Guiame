@@ -15,6 +15,7 @@ import PremiumPage from './pages/PremiumPage.jsx';
 import TestPage from './pages/TestPage.jsx';
 import PaginaAptitudes from './pages/PaginaAptitudes.jsx';
 import TestPremiumPage from './pages/TestPremiumPage.jsx';
+import CarreraPage from './pages/CarreraPage.jsx';
 
 
 const router = createBrowserRouter([
@@ -54,6 +55,9 @@ const router = createBrowserRouter([
   },{
     path: "/testPremium",
     element: <TestPremiumPage />,
+  },{
+    path: "/carrera",
+    element: <CarreraPage />,
   },
 ])
 
