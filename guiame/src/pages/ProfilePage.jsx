@@ -13,6 +13,8 @@ const ProfilePage = () => {
     const hobbyPreferidoTest="Videojuegos"
 
     return(
+
+        
         <div className="flex flex-col">
             <h1 className='font-bold select-none text-4xl p-[35px] font-sans text-[#293A4E]'>PERFIL</h1>
             <div className="flex bg-[#CAD6FF] justify-center sm:w-auto mx-auto items-center sm:flex-col flex-col rounded-3xl p-[20px]">
