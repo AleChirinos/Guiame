@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import backgroundImage from '../assets/backgroundRegister.jpg';
+import LoginPage from './LoginPage';
 
 const RegisterPage = () => {
+    const[email,setEmail]=useState("")
+    const[pass,setPass]=useState("")
+    const guardar=()=>{
+        <LoginPage email={email} pass={pass}></LoginPage>
+    }
     return (
         <div className="h-screen bg-cover bg-center flex items-center bg-opacity-50" style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className=" ml-auto mx-20 bg-white rounded-lg">
@@ -29,6 +35,7 @@ const RegisterPage = () => {
                             <input
                                 type="email"
                                 placeholder='Introduce tu email aqui'
+                                onChange={(e) => setEmail(e.target.value)}
                                 style={{
                                     width: '100%',
                                     border: '1px solid #a8c0ff',
@@ -134,6 +141,7 @@ const RegisterPage = () => {
                             <input
                                 type="password"
                                 placeholder='Introduce tu contraseña aqui'
+                                onChange={(e) => setPass(e.target.value)}
                                 style={{
                                     width: '100%',
                                     border: '1px solid #a8c0ff',
@@ -145,7 +153,7 @@ const RegisterPage = () => {
                             />
                         </div>
                         <Link to="/" >
-                            <button className=" px-4 py-2 bg-blue-500 text-white rounded my-2" type="submit"
+                            <button onClick={guardar} className=" px-4 py-2 bg-blue-500 text-white rounded my-2" type="submit"
                                 style={{
                                     width: '100%'
                                 }}>Crear cuenta</button>

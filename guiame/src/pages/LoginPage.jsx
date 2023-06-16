@@ -2,14 +2,24 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import backgroundImage from '../assets/backgroundLogin.jpg';
 
-const LoginPage = () => {
-    const [email, setEmail] = useState('');
+const LoginPage = ({pass}) => {
+    const email="diego22@gmail.com"
+    const [mail, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [correcto, setCorrecto] = useState(false);
+    const [c, setc] = useState(false);
+    const errorE =()=>{
+        setc(true);
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Email:', email);
-        console.log('Password:', password);
+        console.log('Email:', mail);
+        console.log('Password:', pass);
+        if(mail==email){
+            setCorrecto(true)
+        }
+
     };
 
     return (
@@ -22,7 +32,7 @@ const LoginPage = () => {
                             <label>Email</label> <br />
                             <input
                                 type="email"
-                                value={email}
+                                value={mail}
                                 placeholder='Introduce tu email aqui'
                                 onChange={(e) => setEmail(e.target.value)}
                                 style={{
@@ -52,12 +62,24 @@ const LoginPage = () => {
                                 }}
                             />
                         </div>
-                        <Link to="/principal" >
+                        { correcto ?(
+                            <Link to="/principal" >
                             <button className=" px-4 py-2 bg-blue-500 text-white rounded my-2" type="submit" 
                             style={{
                                 width: '100%'
                             }}>Iniciar sesión</button>
-                        </Link>
+                            </Link>
+
+                            ):(
+                                <>
+                                <button onClick={errorE} className=" px-4 py-2 bg-blue-500 text-white rounded my-2" type="submit" 
+                                style={{
+                                    width: '100%'
+                                }}>Iniciar sesión</button>
+                                </>
+
+                            )
+                        }
                     </form>
                     <p >¿Aún no tienes una cuenta?
                         <Link to="/registro" >

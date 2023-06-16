@@ -24,9 +24,6 @@ const ResultsPage = () => {
                     <Link className={`${pathname === '/results' ? 'font-bold' : ''} border-t border-blue-400 block text-center my-2 py-1 text-white`} to={`/results`}>
                         Resultados
                     </Link>
-                    <Link className={`${pathname === '/university' ? 'font-bold' : ''}border-t border-blue-400 block text-center my-2 py-1 text-white`} to={`/university`}>
-                        Universidades
-                    </Link>
                     <Link className={`${pathname === '/calendar' ? 'font-bold' : ''}border-t border-b border-blue-400 block text-center my-2 py-1 text-white`} to={`/calendar`}>
                         Calendario
                     </Link>
