@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link} from "react-router-dom";
 import icon from "../assets/test.jpg"
 
 const Resultados = () => {
@@ -19,16 +20,15 @@ const Resultados = () => {
           Resultados - Carreras Compatibles
         </h4>
         {res ? (
-            <div>
-              <h4 className="text-[#5c6989] text-mg text-center font-bold mx-5 my-5">
-                -Ingenieria de Sistemas
-              </h4>
-              <h4 className="text-[#5c6989] text-mg text-center font-bold mx-5 my-5">
-                -Ingenieria en telecomunicaciones
-              </h4>
-              <h4 className="text-[#5c6989] text-mg text-center font-bold mx-5 my-5">
-                -Matemáticas
-              </h4>
+            <div className="!place-content-center !text-center">
+              <ul>
+                <li className="mx-5 my-4"><Link to={`/carrera/sistemas`} className="text-[#10172b] text-mg  font-semibold hover:text-[#5f73a8]">
+                -Ingenieria de Sistemas</Link></li>
+                <li className="mx-5 my-4"><Link to={`/carrera/telecom`} className="text-[#10172b] text-mg  font-semibold hover:text-[#5f73a8]">
+                -Ingenieria en Telecomunicaciones</Link></li>
+                <li className="mx-5 my-4"><Link to={`/carrera/matematica`} className="text-[#10172b] text-mg  font-semibold hover:text-[#5f73a8]">
+                -Matemáticas</Link></li>
+              </ul>
             </div>
         ) : (
           <div>
@@ -56,3 +56,15 @@ const Resultados = () => {
 };
 
 export default Resultados;
+
+{/* Para el Resultados page
+<div className="!place-content-center !text-center">
+<ul>
+  <li className="mx-5 my-4"><Link to={`/carrera/marketing`} className="text-[#10172b] text-mg  font-semibold hover:text-[#5f73a8]">
+  * Marketing</Link></li>
+  <li className="mx-5 my-4"><Link to={`/carrera/disenografico`} className="text-[#10172b] text-mg  font-semibold hover:text-[#5f73a8]">
+  * Diseño Gráfico</Link></li>
+  <li className="mx-5 my-4"><Link to={`/carrera/disenografico`} className="text-[#10172b] text-mg  font-semibold hover:text-[#5f73a8]">
+  * Diseño Gráfico</Link></li>
+</ul>
+</div> */}
