@@ -7,7 +7,7 @@ const RegisterPage = () => {
     const[email,setEmail]=useState("")
     const[pass,setPass]=useState("")
     const guardar=()=>{
-        <LoginPage email={email} pass={pass}></LoginPage>
+      
     }
     return (
         <div className="h-screen bg-cover bg-center flex items-center bg-opacity-50" style={{ backgroundImage: `url(${backgroundImage})` }}>
