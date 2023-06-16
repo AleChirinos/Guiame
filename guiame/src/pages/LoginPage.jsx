@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import backgroundImage from '../assets/backgroundLogin.jpg';
 
-const LoginPage = ({pass}) => {
+const LoginPage = () => {
     const email="diego22@gmail.com"
     const [mail, setEmail] = useState('');
     const [password, setPassword] = useState('');
