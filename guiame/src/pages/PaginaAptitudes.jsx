@@ -4,6 +4,7 @@ import PreguntaLikert from '../components/PreguntaLikert';
 import datos from '../data/test1.json';
 import './PaginaAptitudes.css';
 import Resultados from '../components/Resultados';
+
 const PaginaAptitudes = () => {
     const [respuestas, setRespuestas] = useState([]);
     const handleRespuestaSeleccionada = (pregunta, respuesta) => {
