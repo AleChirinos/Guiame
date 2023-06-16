@@ -56,7 +56,7 @@ const router = createBrowserRouter([
     path: "/testPremium",
     element: <TestPremiumPage />,
   },{
-    path: "/carrera",
+    path: "/carrera/:carreraId",
     element: <CarreraPage />,
   },
 ])
